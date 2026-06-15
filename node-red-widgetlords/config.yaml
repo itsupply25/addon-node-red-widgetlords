@@ -43,8 +43,7 @@ options:
   certfile: fullchain.pem
   keyfile: privkey.pem
   system_packages: []
-  npm_packages:
-    - node-red-contrib-widgetlords
+  npm_packages: []
   init_commands: []
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
