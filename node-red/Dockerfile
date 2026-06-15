@@ -51,6 +51,14 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
+ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+RUN npm install \
+    --no-audit \
+    --no-fund \
+    --unsafe-perm \
+    node-red-contrib-widgetlords
+
 # Health check
 HEALTHCHECK --start-period=10m \
     CMD curl --fail http://127.0.0.1:46836 || exit 1

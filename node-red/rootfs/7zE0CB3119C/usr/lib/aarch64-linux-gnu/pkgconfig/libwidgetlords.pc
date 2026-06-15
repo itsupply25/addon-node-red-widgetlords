@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib/aarch64-linux-gnu
+
+Name: libwidgetlords
+Description: libwidgetlords
+Version: 2.0.0
+Libs: -L${libdir} -lwidgetlords
+Libs.private: -lm
+Cflags: -I${includedir}/widgetlords

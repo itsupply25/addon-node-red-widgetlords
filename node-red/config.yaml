@@ -62,6 +62,7 @@ schema:
     - str
   npm_packages:
     - str
+    - node-red-contrib-widgetlords
   init_commands:
     - str
   leave_front_door_open: bool?
