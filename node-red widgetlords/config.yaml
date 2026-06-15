@@ -1,7 +1,7 @@
 ---
-name: Node-RED
+name: Node-RED widgetlords
 version: dev
-slug: nodered
+slug: node-red-widgetlords
 description: Flow-based programming for the Internet of Things
 url: https://github.com/hassio-addons/app-node-red
 ingress: true
