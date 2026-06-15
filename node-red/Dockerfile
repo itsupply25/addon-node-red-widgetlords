@@ -51,11 +51,15 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
-ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+RUN modprobe i2c-dev || true
+
+ENV LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
 
 RUN npm install \
     --no-audit \
     --no-fund \
+    --no-update-notifier \
+    --omit=dev \
     --unsafe-perm \
     node-red-contrib-widgetlords
 
