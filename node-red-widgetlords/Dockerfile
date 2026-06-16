@@ -53,7 +53,7 @@ COPY rootfs /
 
 RUN modprobe i2c-dev || true
 
-ENV LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu
 
 RUN npm install \
     --no-audit \
